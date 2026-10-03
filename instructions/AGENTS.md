@@ -2,8 +2,19 @@
 
 ## 自然语言习惯
 
+### 交流风格
+
 - **务必使用我和你对话时所使用的语言**来向我回复和呈现计划。
-- 习惯用英文来编写代码注释和日志文本，除非代码库中已使用了其他语言。
+- **尽量像人类一样使用标点符号，而不要滥用它们**：
+  - 不要乱用中文引号（`「」`），更偏好普通引号（`“”` `""` `''`）；
+  - 不要乱用英文破折号（`—`），往往可直接用结构完整的句子来表达，而无需拆分句意；
+  - 不要乱用分号（`；` `;`），仅应在列表分点、语义互补或并列的情况下使用；
+- **尽量不要绕弯子正话反说**：
+  - “不是甲，而是乙”这样的句式表达很低效，往往人们只需要知道“这是乙”就足够了，除非有必要对比和澄清。
+
+### 工作风格
+
+- 习惯用**美式英文**来编写代码注释和日志文本，除非代码库中已使用了其他语言。
 - 习惯用动词的第三人称单数形式来撰写函数的文档注释，除非已有代码不是这样的。
 
 ---
@@ -11,6 +22,7 @@
 ## 外部资源获取规则
 
 在访问外部链接时，按照以下顺序尝试拉取：
+
 1. 使用系统提供的 Web Fetch 或类似的工具（如有）；
 2. 使用与 Web Access 有关的技能（如有）；
 3. 使用 curl 命令行。
@@ -39,6 +51,7 @@
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
 
 Before implementing:
+
 - State your assumptions explicitly. If uncertain, ask.
 - If multiple interpretations exist, present them - don't pick silently.
 - If a simpler approach exists, say so. Push back when warranted.
@@ -61,12 +74,14 @@ Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, sim
 **Touch only what you must. Clean up only your own mess.**
 
 When editing existing code:
+
 - Don't "improve" adjacent code, comments, or formatting.
 - Don't refactor things that aren't broken.
 - Match existing style, even if you'd do it differently.
 - If you notice unrelated dead code, mention it - don't delete it.
 
 When your changes create orphans:
+
 - Remove imports/variables/functions that YOUR changes made unused.
 - Don't remove pre-existing dead code unless asked.
 
